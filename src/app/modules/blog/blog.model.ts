@@ -30,7 +30,7 @@ blogSchema.pre('save',async function(next){
     const id = this?.author;
     const user= await User.findById(id);
     const isBlocked = user?.isBlocked;
-
+    console.log(id,'id')
     if(isBlocked){
         throw new AppError(StatusCodes.UNAUTHORIZED,"Your id is blocked, Please contact admin to unblock");
     }
