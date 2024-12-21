@@ -2,8 +2,8 @@ Overview
 This is a Blog website backend with auth. This backend build with Node.js, Express,typescript,mongoose,zod validation and MongoDB.
 First, clone the repository
 
-          git clone https://github.com/mehedi891/bicycle-backend.git
-          cd bicycle-backend
+          git https://github.com/mehedi891/blog-backend.git
+          cd blog-backend
           
       
 Now run this command
