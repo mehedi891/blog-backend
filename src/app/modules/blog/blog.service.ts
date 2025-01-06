@@ -34,11 +34,14 @@ const getAllBlogFromDb = async(query:Record<string,unknown>) =>{
         }))
     })
 
+       
+
+
     //let filterFields = 'author'
-    const filter = query.filter ? {author:query?.filter} : {};
+    const filter = query?.filter ? {author:query?.filter} : {};
     const filterQuery = searchQuery.find(filter);
 
-  
+  console.log(filter)
 
     let sort = `-${query?.sortBy}` || '-ceatedAt' as string;
 
@@ -46,6 +49,8 @@ const getAllBlogFromDb = async(query:Record<string,unknown>) =>{
         sort = query?.sortBy as string
     }
     const allBlog = await filterQuery.find().populate("author").sort(sort);
+
+     //console.log(search,searchQuery)
     return allBlog
 }
 

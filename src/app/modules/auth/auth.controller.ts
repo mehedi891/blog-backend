@@ -23,7 +23,9 @@ const token =  await authServices.loginUser(req.body)
     success: true,
     statusCode: StatusCodes.OK,
     message: "User login successfully",
-    data: token
+    data: {
+        token
+    }
    
 });
 
